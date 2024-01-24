@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "336e246f-0bd8-486d-b4a4-c1a9963d2458",
+		"name": "Hackanews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29013468"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "add_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"Adolfo\",\r\n    \"user_email\": \"adolfo@ad.com\",\r\n    \"user_password\": \"Rb1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"adolfo@ad.com\",\r\n    \"password\" : \"Rb1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/update/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6InNlw7FvciIsImlhdCI6MTY5NTIyMjMyMSwiZXhwIjoxNjk1MzA4NzIxfQ.re-VqhD6smkNtyXzGMx0aO1qylAU1AxgAGJ6n8Sxf0M",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/delete/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll_users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getOne_users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Entries",
+			"item": [
+				{
+					"name": "add_entrie",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "like_entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJfbmFtZSI6Imp1bGlvIiwiaWF0IjoxNjk1NDg3MjcwLCJleHAiOjE2OTU1NzM2NzB9.sqzkG0jiTz6XVbiOC7NVABhppuaWjDMMo4HuwMbdzM8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/entries/like/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entries",
+								"like",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new_entrie_withfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:3000/entries/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entries",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_entrie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJfbmFtZSI6ImJvcnJhZG8iLCJpYXQiOjE2OTUzNjUwMDgsImV4cCI6MTY5NTQ1MTQwOH0.aRIDnQUUoONEcLma2gAW4iv9R25HxG2cVfvUaTsg1Qw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"new_title\":\"Titanic\",\r\n    \"new_entrance\":\"Pelicla antigua\",\r\n    \"new_text\":\"Une pelicula muy bonita\",\r\n    \"new_theme\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/entries/update/30",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entries",
+								"update",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_entries",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "view_one_entrie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/entries/view/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entries",
+								"view",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_by_theme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/entries/themes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entries",
+								"themes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_entrie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsInVzZXJfbmFtZSI6ImFsZm9uc294IiwiaWF0IjoxNjk1NTQ2NTQwLCJleHAiOjE2OTU2MzI5NDB9.eYw7pmOid1-sPjDJaSQVdOJEvu1H9_jEYa6JOHW6x0o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/entries/delete/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"entries",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

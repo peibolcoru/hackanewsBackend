@@ -1,0 +1,74 @@
+### Add Entry
+POST http://localhost:3000/entries/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M
+Content-Type: application/json
+
+{
+    "new_title": "Fast and Furious 28",
+    "new_entrance": "Estreno de la nueva peli de moda",
+    "new_text": "Una pelicula completamente nueva en el sector de carreras, en esta ocasion con carreras mortales en sillas de ruedas desde el asilo donde nuestro protagonista volvera a defender a la familia de una nueva amenaza",
+    "new_theme": 3
+}
+
+### Delete Entry
+DELETE http://localhost:3000/entries/:entryId
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M 
+
+### Get ALL Entries
+GET http://localhost:3000/entries/allentries
+
+### Update Entry
+POST http://localhost:3000/entries/update/:entryId
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M
+Content-Type: application/json
+
+{
+    "new_title": "Mulan 13",
+    "new_entrance": "Estreno de la nueva pelila de moda",
+    "new_text": "Una pelicula completamente nueva en el sector de aventuras, en esta ocasion con carreras mortales en sillas de ruedas desde el asilo donde nuestro protagonista volvera a defender a la familia de una nueva amenaza",
+    "new_theme": 2
+}
+
+### View Entry One User
+GET http://localhost:3000/entries/view/:news_id
+
+### Add User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "user_name" : "Juaiton",
+    "user_email": "juanitoreshulon_85@hotmail.com",
+    "user_password": "1234AbCd"
+}
+
+### Delete User
+DELETE http://localhost:3000/users/delete/:uderDeleteId
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M
+
+### Get All User
+GET http://localhost:3000/users/getAllUsers/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M
+
+### Get One User
+GET http://localhost:3000/users/getUser/:userId
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M
+
+### Login User
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "juanitoreshulon_85@hotmail.com",
+    "password": "1234AbCd"
+}
+
+### Update User
+POST http://localhost:3000/users/update/:userId
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJfbmFtZSI6Ikp1YW4iLCJpYXQiOjE2OTUzNzMxNzQsImV4cCI6MTY5NTQ1OTU3NH0.bPUSELVFU4iG3UMoM7crdrcFOXVmuIjSQjqOY4HUf-M
+
+{
+    "user_email": "juanitoreshulon_85@hotmail.com",
+    "user_password": "1234AbCd"
+}  
