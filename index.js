@@ -11,11 +11,7 @@ const fileUpload = require('express-fileupload')
 const cors = require('cors')
 
 app.use(morgan('dev'))
-app.use(
-  cors({
-    origin: 'http://localhost:5173'
-  })
-)
+app.use(cors())
 
 app.use(express.static('uploads'))
 
